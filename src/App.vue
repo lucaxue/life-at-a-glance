@@ -4,6 +4,7 @@ import dayjs from "dayjs";
 const dateOfBirth = ref<dayjs.Dayjs>(dayjs().subtract(20, "year"));
 const dateOfDeath = dayjs(dateOfBirth.value).add(90, "year");
 
+// @ts-ignore
 const range = useDateRange({
   start: dateOfBirth.value,
   finish: dateOfDeath,
