@@ -10,13 +10,15 @@ export default defineConfig({
   plugins: [
     Vue(),
 
+    // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: ["vue"],
-      dts: "src/auto-imports.d.ts",
-      dirs: ["src/composables"],
+      dts: "./src/auto-imports.d.ts",
+      dirs: ["./src/composables/**"],
       vueTemplate: true,
     }),
 
+    // https://github.com/antfu/unplugin-vue-components
     Components({
       dts: true,
     }),
